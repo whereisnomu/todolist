@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача на события</title>
+    <script>function onButtonClick(){
+        inputValue = document.getElementById('input_text').value
+        return document.body.innerHTML += `<p>${inputValue}</p>`;
+    }</script>
+    <script>function onRemoveClick(){
+        element = document.getElementsByTagName('p')
+        return document.querySelectorAll('p').forEach(e => e.remove());
+
+    }</script>
+</head>
+<body>
+    <div>
+        <label type="text">Ввести задачу</label>
+        <input id="input_text" type="text">
+        <button id="button" onclick="onButtonClick();">Сохранить</button>
+        <button onclick="onRemoveClick()">Очистить список</button>
+    </div>
+</body>
+</html>
